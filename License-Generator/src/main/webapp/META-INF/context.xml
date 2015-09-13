@@ -1,2 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context antiJARLocking="true" path="/License-Generator"/>
+<Context antiJARLocking="true" path="/License-Generator">
+    <Resource name="jdbc/licenseGenerator"
+              type="javax.sql.DataSource"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/licenseGenerator"
+              username="licenseGenerator"
+              password="4FSVhrLzR5KrvKH9"
+              maxActive="8" 
+              maxIdle="4" 
+              maxWait="10000"
+              auth="Container"
+    />
+    <Realm className="org.apache.catalina.realm.DataSourceRealm"
+           digest="MD5"
+           dataSourceName="jdbc/licenseGenerator"
+           userTable="users"
+           userNameCol="user_name" 
+           userCredCol="password"
+           userRoleTable="users_roles" 
+           roleNameCol="role_name"
+           localDataSource="true"/>
+</Context>
