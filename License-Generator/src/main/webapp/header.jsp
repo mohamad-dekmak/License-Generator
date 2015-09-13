@@ -63,7 +63,7 @@
                             </a>
                         </li>
                         <li class="dropdown">
-                            <a id="dropDashboard" href="clients.jsp" role="button">
+                            <a id="dropDashboard" href="clients-list.jsp" role="button">
                                 Clients
                             </a>
                         </li>

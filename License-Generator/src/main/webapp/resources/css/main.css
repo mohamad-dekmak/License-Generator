@@ -21,3 +21,39 @@ body {
 .no-padding{
     padding: 0px;
 }
+.admin-links{
+    font-size: 17px;
+}
+.dropdown-actions-list{
+    height: 34px;
+}
+.socail-title{
+    font-size: 20px;
+}
+.socail-sub-title{
+    font-size: 13px;
+}
+.social-brand-container{
+    margin-bottom: -15px;
+}
+.dropdown-menu > li > a.header-change-pwd{
+    font-weight: bold;
+}
+.popover-title{
+    background-color: #C8E5F3;
+}
+.notificationRow, .notificationMessageCell{
+    padding: 0;
+}
+#contactForm .glyphicon-chevron-right, #contactForm .glyphicon-chevron-down{
+    padding-top: 10px;
+}
+#contactForm .glyphicon-chevron-right:hover, #contactForm .glyphicon-chevron-down:hover{
+    cursor: pointer;
+}
+#calendar {
+    background-color: #fff;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
