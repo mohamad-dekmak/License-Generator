@@ -47,14 +47,14 @@
             <div class="panel-heading">Licenses</div>
             <div class="panel-body">
                 <div class="col-md-4 no-padding">
-                    <a href="Licenses.jsp">
+                    <a href="license-add.jsp">
                         <img class="img-rounded" src="resources/images/licenses.png" width="115" height="115" />
                     </a>
                 </div>
                 <div class="col-md-8">
                     <div class="clearfix">&nbsp;</div>
                     <p class="text">Generate your licenses by managing your clients, adding users & more.</p>
-                    <a href="Licenses.jsp" class="btn btn-link no-padding">Generate</a>
+                    <a href="license-add.jsp" class="btn btn-link no-padding">Generate</a>
                 </div>
             </div>
         </div>

@@ -68,9 +68,15 @@
                             </a>
                         </li>
                         <li class="dropdown">
-                            <a id="dropDashboard" href="licenses.jsp" role="button">
+                            <a id="dropTask" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                                 Licenses
+                                <span class="caret"></span>
                             </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropTask">
+                                <li><a href="licenses.jsp">List</a></li>
+                                <li class="divider"></li>
+                                <li><a href="license-add.jsp">Add License</a></li>
+                            </ul>
                         </li>
                         <li class="dropdown">
                             <a id="dropReports" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">

@@ -35,6 +35,10 @@
             JSONObject postData = new JSONObject();
             postData = new JSONObject(request.getParameter("data"));
             strResponse = db.editClient(id, postData);
+        }else if (request.getParameter("userAction").equals("addLicense")) {
+            JSONObject postData = new JSONObject();
+            postData = new JSONObject(request.getParameter("data"));
+            strResponse = db.addLicense(postData);
         }
     } else {
         strResponse = "user action not defined";
