@@ -31,7 +31,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import static org.json.JSONObject.NULL;
+import org.json.simple.parser.JSONParser;
 
 /**
  *
@@ -269,8 +269,8 @@ public class Database {
         }
         return clients;
     }
-    
-    public String downloadLicense(String id) throws InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException, UnsupportedEncodingException, IllegalBlockSizeException, BadPaddingException{
+
+    public String downloadLicense(String id) throws InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException, UnsupportedEncodingException, IllegalBlockSizeException, BadPaddingException {
         String client = null, product = null, nbOfUsers = null, expiresOn = null;
         try {
             statement = connection.createStatement();
@@ -290,7 +290,8 @@ public class Database {
         product = encr.encrypt(product);
         nbOfUsers = encr.encrypt(nbOfUsers);
         expiresOn = encr.encrypt(expiresOn);
-        JSONObject jsonObj = new JSONObject("{\"client\":\"" + client + "\",\"product\":\"" + product + "\",\"nbOfUsers\":\"" + nbOfUsers + "\",\"expiresOn\":\"" + expiresOn + "\"}");
+        String license = encr.encrypt(client);
+        JSONObject jsonObj = new JSONObject("{\"client\":\"" + client + "\",\"product\":\"" + product + "\",\"nbOfUsers\":\"" + nbOfUsers + "\",\"expiresOn\":\"" + expiresOn + "\",\"license\":\"" + license + "\"}");
         return jsonObj.toString();
     }
 }
